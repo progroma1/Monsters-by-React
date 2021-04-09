@@ -4,7 +4,6 @@ import './App.css';
 import {SearchBox} from './components/search-box/search-box.component';
 
 
-
 class App extends Component {
   constructor() {
     super();
@@ -21,9 +20,11 @@ componentDidMount() {
 }
 
 handleChange = e => {
-  console.log(e.target);
- // this.setState({searchField:e.target.value})
+    this.setState({searchField:e.target.value})
 }
+
+
+
 
   render() {
     const {monsters,searchField} = this.state;
@@ -32,6 +33,7 @@ handleChange = e => {
       );
     return (
 <div className="App">
+      <h1> Monsters Rolodex </h1>
       <SearchBox 
       placeholder='search monster'
       handleChange={this.handleChange}
